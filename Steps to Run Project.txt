@@ -8,6 +8,7 @@ IDE required :
 
 
 Step 1 : Import project in Eclipse IDE 
+		Firstly extract Nimap.zip file in your system
 		File --> Open project from file System --> Select project path
 
 Step 2 : Create database in MySQL Workbench
