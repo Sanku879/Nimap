@@ -1,0 +1,95 @@
+Steps to Run Project
+
+
+IDE required : 
+	1) Eclipse
+	2) MySQL Workbench 
+	3) Postman
+
+
+Step 1 : Import project in Eclipse IDE 
+		File --> Open project from file System --> Select project path
+
+Step 2 : Create database in MySQL Workbench
+			Create Database nimap
+
+Step 3 : Change Application.properties file 
+		Change username : Your Database Username
+		Change Password : Your Database Password
+
+Step 4 : Run NimapApplication.java file
+
+
+
+Steps to Add CRUD Operation
+
+Step 1 : Open Postman
+
+Step 2 : Category table
+
+	Post --> https://localhost:8080/api/categories
+
+	Write this code to add categories in your table
+	
+		{
+			"name":"Category_name"
+		}
+
+
+	Get(Single Category) --> TO get single category use below url
+			https://localhost:8080/api/categories/{Category_id}
+
+	Get(All categories) --> TO get All categorys use below url
+			https://localhost:8080/api/categories
+
+
+	Put --> To update record 
+		https://localhost:8080/api/categories/{Category_id}
+
+			{	 
+				"name":"Updated Category Name"
+			}
+
+	Delete --> TO delete Record
+		https://localhost:8080/api/categories/{id}
+			
+	
+
+Step 3 :Product table
+
+	Post --> https://localhost:8080/api/products/{category_id}
+
+	Write this code to add products in your table
+	
+		{
+			"name":"Product Name"
+			"Price" : "Product_Price",
+			"category":{
+					"id":"Category_id"
+				   }
+		}
+
+
+	Get(Single Category) --> TO get single Product use below url
+			https://localhost:8080/api/products/{id}
+
+	Get(All categories) --> TO get All Products use below url
+			https://localhost:8080/api/products
+
+
+	Put --> To update Product record 
+		https://localhost:8080/api/Products/{Product_id}
+
+			{
+				"name":"Updated Product Name"
+				"Price" : "update Product_Price",
+				"category":{
+					"id":"Category_id"
+				   	   }
+			}
+
+
+	Delete --> TO delete product Record
+		https://localhost:8080/api/Products/{Product_id}
+			
+	
